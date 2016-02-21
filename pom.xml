@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.iancollington.blog</groupId>
+    <artifactId>angular-hello-world</artifactId>
+
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Angular Hello World</name>
+
+    <modules>
+        <module>angular-hello-world-service</module>
+        <module>angular-hello-world-ui</module>
+    </modules>
+</project>

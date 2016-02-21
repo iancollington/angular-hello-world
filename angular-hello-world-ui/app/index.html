@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularHelloWorld">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Angular Hello World!</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+		<script src="js/angular-hello-world.js"></script>
+	</head>
+	<body ng-controller="HelloWorldController as helloWorldCtrl">
+		<div class="container">
+			<h1>Angular Hello World Application</h1>
+
+			<div class="jumbotron">
+				<h1 ng-bind="helloWorldCtrl.data.message"></h1>
+			</div>
+		</div>
+	</body>
+</html>
