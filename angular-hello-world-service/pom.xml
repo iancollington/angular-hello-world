@@ -34,6 +34,40 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+              <groupId>io.fabric8</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <version>0.15.9</version>
+              <configuration>
+                <images>
+                  <image>
+                    <name>iancollington/angular-hello-world-service</name>
+                    <build>
+                      <from>tomcat</from>
+                      <assembly>
+                        <descriptor>assembly.xml</descriptor>
+                        <basedir>/</basedir>
+                      </assembly>
+                      <ports>
+                        <port>8080</port>
+                      </ports>
+                      <runCmds>
+                        <run>rm -rf /usr/local/tomcat/webapps/ROOT</run>
+                      </runCmds>
+                    </build>
+                  </image>
+                </images>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>docker:build</id>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>build</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

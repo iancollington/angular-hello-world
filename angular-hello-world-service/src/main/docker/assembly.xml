@@ -1,0 +1,12 @@
+<assembly>
+  <id>angular-hello-world-service-docker-maven</id>
+  <dependencySets>
+    <dependencySet>
+      <includes>
+        <include>com.iancollington.blog:angular-hello-world-service</include>
+      </includes>
+      <outputDirectory>/usr/local/tomcat/webapps/</outputDirectory>
+      <outputFileNameMapping>angular-hello-world-service.war</outputFileNameMapping>
+    </dependencySet>
+  </dependencySets>
+</assembly>

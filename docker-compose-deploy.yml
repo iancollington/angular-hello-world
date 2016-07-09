@@ -1,14 +1,13 @@
 tomcat:
   container_name: angular-hello-world-service
-  build: ./angular-hello-world-service
+  image: iancollington/angular-hello-world-service
   ports:
     - "9001:8080"
 
 angular-hello-world-ui:
   container_name: angular-hello-world-ui
-  build: ./angular-hello-world-ui
+  image: iancollington/angular-hello-world-ui
   links:
     - tomcat
   ports:
     - "8080:80"
-  command: /bin/bash -c "nginx -g 'daemon off;'"

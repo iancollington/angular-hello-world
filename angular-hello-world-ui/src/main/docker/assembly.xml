@@ -1,0 +1,15 @@
+<assembly>
+  <id>angular-hello-world-ui-docker-maven</id>
+  <fileSets>
+    <fileSet>
+      <directory>target/dist</directory>
+      <outputDirectory>/usr/share/nginx/html/</outputDirectory>
+    </fileSet>
+  </fileSets>
+  <files>
+    <file>
+      <source>src/main/docker/nginx.conf</source>
+      <outputDirectory>/etc/nginx/</outputDirectory>
+    </file>
+  </files>
+</assembly>

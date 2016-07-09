@@ -57,6 +57,38 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+              <groupId>io.fabric8</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <version>0.15.9</version>
+              <configuration>
+                <images>
+                  <image>
+                    <name>iancollington/angular-hello-world-ui</name>
+                    <build>
+                      <from>nginx</from>
+                      <assembly>
+                        <descriptor>assembly.xml</descriptor>
+                        <basedir>/</basedir>
+                      </assembly>
+                      <ports>
+                        <port>80</port>
+                      </ports>
+                      <cmd>/bin/bash -c "nginx -g 'daemon off;'"</cmd>
+                    </build>
+                  </image>
+                </images>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>docker:build</id>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>build</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
