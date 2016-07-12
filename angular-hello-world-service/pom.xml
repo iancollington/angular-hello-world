@@ -37,7 +37,6 @@
             <plugin>
               <groupId>io.fabric8</groupId>
               <artifactId>docker-maven-plugin</artifactId>
-              <version>0.15.9</version>
               <configuration>
                 <images>
                   <image>
@@ -61,9 +60,10 @@
               <executions>
                 <execution>
                   <id>docker:build</id>
-                  <phase>package</phase>
+                  <phase>install</phase>
                   <goals>
                     <goal>build</goal>
+                    <goal>push</goal>
                   </goals>
                 </execution>
               </executions>
