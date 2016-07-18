@@ -1,21 +1,13 @@
-tomcat:
+angular-hello-world-service:
   container_name: angular-hello-world-service
-  image: tomcat:8.5
+  image: iancollington/angular-hello-world-service
   ports:
     - "9001:8080"
-    - "9401:62911"
-    - "9601:1898"
-  volumes:
-    - ./angular-hello-world-service/target/angular-hello-world-service.war:/usr/local/tomcat/webapps/angular-hello-world-service.war
 
 angular-hello-world-ui:
   container_name: angular-hello-world-ui
-  image: nginx
+  image: iancollington/angular-hello-world-ui
   links:
-    - tomcat
+    - angular-hello-world-service
   ports:
     - "8080:80"
-  volumes:
-    - ./angular-hello-world-ui/target/dist:/usr/share/nginx/html
-    - ./angular-hello-world-ui/docker/nginx.conf:/etc/nginx/nginx.conf
-  command: /bin/bash -c "nginx -g 'daemon off;'"
