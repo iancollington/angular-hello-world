@@ -54,6 +54,13 @@
                   <goal>build</goal>
                 </goals>
               </execution>
+              <execution>
+                <id>docker:deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>push</goal>
+                </goals>
+              </execution>
             </executions>
           </plugin>
         </plugins>

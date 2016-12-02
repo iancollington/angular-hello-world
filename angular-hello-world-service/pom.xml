@@ -57,15 +57,6 @@
                   </image>
                 </images>
               </configuration>
-              <executions>
-                <execution>
-                  <id>docker:build</id>
-                  <phase>install</phase>
-                  <goals>
-                    <goal>build</goal>
-                  </goals>
-                </execution>
-              </executions>
             </plugin>
         </plugins>
     </build>
