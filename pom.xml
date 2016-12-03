@@ -19,21 +19,6 @@
         <url>https://github.com/iancollington/angular-hello-world</url>
     </scm>
 
-    <distributionManagement>
-        <repository>
-            <layout>default</layout>
-            <id>central</id>
-            <name>releases</name>
-            <url>http://artifactory.iancollington.com:8081/artifactory/libs-release-local</url>
-        </repository>
-        <snapshotRepository>
-            <layout>default</layout>
-            <id>snapshots</id>
-            <name>snapshots</name>
-            <url>http://artifactory.iancollington.com:8081/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <modules>
         <module>angular-hello-world-service</module>
         <module>angular-hello-world-ui</module>
